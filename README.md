@@ -4,12 +4,12 @@
 **Gramtakipci** is a powerful tool designed to help users increase their Instagram followers, likes, and views for free. With a user-friendly interface, you can easily manage your Instagram engagement in a few simple steps.
 
 ## Features
-- **Get Free Instagram Likes**: Increase likes on your posts with our automated like generation feature.
 - **Get Free Instagram Followers**: Boost your follower count instantly by sending followers to your Instagram account.
 - **Get Free Instagram Views**: Enhance the visibility of your Instagram Reels or Videos with more views.
 - **Secure & Reliable**: Your account credentials are securely managed.
 - **Easy to Use**: Intuitive interface with simple input commands.
 - **Support for Multiple Hosts**: Use multiple services to increase success rates.
+- **Get Free Instagram Likes**: Increase likes on your posts with our automated like generation feature.
 
 ## Installation
 ```bash
@@ -39,8 +39,8 @@ After running the program, you will be prompted to select one of the main featur
 - **Continuous Checkpoint Issues**: If you keep encountering checkpoint issues despite no such issue appearing in the Instagram app, it could mean the service is down or Instagram has flagged the service as spam.
 
 ## Debugging
-- Use `CTRL + C` to interrupt a process if it gets stuck.
 - Use `CTRL + Z` to stop the program if needed.
+- Use `CTRL + C` to interrupt a process if it gets stuck.
 
 ## Support
 
