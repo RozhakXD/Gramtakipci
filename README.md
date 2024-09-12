@@ -34,9 +34,9 @@ After running the program, you will be prompted to select one of the main featur
 ## Troubleshooting
 - **Login Errors**: If your account fails to login on two or more services, try logging in manually and re-running the tool.
 - **Checkpoint Errors**: If you encounter checkpoint errors, your account may have been flagged by Instagram. Ensure your actions are within Instagram’s guidelines.
-- **No Increase in Followers/Likes/Views**: If the counts are not increasing, it's possible that no users on the website have successfully completed actions like, follow, or view.
 - **Drop in Views**: If you notice a sudden drop in views, it could mean that Instagram has detected the activity as spam.
 - **Continuous Checkpoint Issues**: Repeated checkpoint issues, even when not shown in the Instagram app, may indicate a service outage or that Instagram has flagged the tool as spam.
+- **No Increase in Followers/Likes/Views**: If the counts are not increasing, it's possible that no users on the website have successfully completed actions like, follow, or view.
 
 ## Debugging
 - Use `CTRL + Z` to stop the program if needed.
