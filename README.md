@@ -1,7 +1,7 @@
 # Gramtakipci - BEST INSTAGRAM LIKES
 ![Gramtakipci](https://github.com/user-attachments/assets/0f1eddc4-fc78-4327-9b6b-08122dfd7671)
 
-**Gramtakipci** is a powerful tool designed to help users increase their Instagram followers, likes, and views for free. With a user-friendly interface, you can easily manage your Instagram engagement in a few simple steps
+**Gramtakipci** is a powerful tool designed to help users increase their Instagram followers, likes, and views for free. With a user-friendly interface, you can easily manage your Instagram engagement in a few simple steps.
 
 ## Features
 - **Get Free Instagram Followers**: Boost your follower count instantly by sending followers to your Instagram account.
