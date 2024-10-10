@@ -15,7 +15,13 @@ SUKSES, GAGAL, BAD, LOOPING, INVALID, CHECKPOINT, TAMPILKAN = 0, 0, [], 0, [], [
 
 def TAMPILKAN_LOGO():
     os.system('cls' if os.name == 'nt' else 'clear')
-    printf(Panel("[bold red]   ____                     _        _    _            _ \n  / ___|_ __ __ _ _ __ ___ | |_ __ _| | _(_)_ __   ___(_)\n | |  _| '__/ _` | '_ ` _ \| __/ _` | |/ / | '_ \ / __| |\n | |_| | | | (_| | | | | | | || (_| |   <| | |_) | (__| |\n[bold white]  \____|_|  \__,_|_| |_| |_|\__\__,_|_|\_\_| .__/ \___|_|\n                                           |_|           \n      [underline green]Free Likes & Followers Instagram - by Rozhak", width=63, style="bold bright_black"))
+    printf(Panel(r"""[bold red]   ____                     _        _    _            _ 
+  / ___|_ __ __ _ _ __ ___ | |_ __ _| | _(_)_ __   ___(_)
+ | |  _| '__/ _` | '_ ` _ \| __/ _` | |/ / | '_ \ / __| |
+ | |_| | | | (_| | | | | | | || (_| |   <| | |_) | (__| |
+[bold white]  \____|_|  \__,_|_| |_| |_|\__\__,_|_|\_\_| .__/ \___|_|
+                                           |_|           
+      [underline green]Free Likes & Followers Instagram - by Rozhak""", width=63, style="bold bright_black"))
     return (True)
 
 class LOGIN:
@@ -26,7 +32,7 @@ class LOGIN:
     def USERNAME(self):
         try:
             TAMPILKAN_LOGO()
-            printf(Panel(f"[bold white]Please fill in with Username and Password, you can use `[bold red]:[bold white]` as a separator. For example:\n[bold green]rozhak.sch.id:Rozhak123[bold white] *[bold red]Don't use Old Instagram[bold white]!", width=63, style="bold bright_black", title="> [Login Instagram] <", subtitle="╭──────", subtitle_align="left"))
+            printf(Panel(f"[bold white]Please fill in with Username and Password, you can use `[bold red]:[bold white]` as a separator. For example:\n[bold green]rozhak.sch.id:Rozhak123[bold white] *[bold red]Don't use Old Instagram[bold white]!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Instagram] <", subtitle="[bold bright_black]╭──────", subtitle_align="left"))
             self.INSTAGRAM = Console().input("[bold bright_black]   ╰─> ")
             if ':' in self.INSTAGRAM:
                 self.USERNAME, self.PASSWORD = (self.INSTAGRAM.split(':')[0], self.INSTAGRAM.split(':')[1])
@@ -37,14 +43,14 @@ class LOGIN:
                             "Password": f"{self.PASSWORD}",
                         })
                     )
-                printf(Panel(f"[bold white]Congratulations, you have successfully logged in. Make sure your account is not affected\nby a checkpoint so you can use the service!", width=63, style="bold bright_black", title="> [Login Sukses] <"))
+                printf(Panel(f"[bold white]Congratulations, you have successfully logged in. Make sure your account is not affected\nby a checkpoint so you can use the service!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Sukses] <"))
                 time.sleep(5.0)
                 FEATURE()
             else:
-                printf(Panel(f"[bold red]You entered the separator between username and password incorrectly, please try again!", width=63, style="bold bright_black", title="> [Login Error] <"))
+                printf(Panel(f"[bold red]You entered the separator between username and password incorrectly, please try again!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Error] <"))
                 sys.exit(1)
         except (Exception) as e:
-            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="> [Error] <"))
+            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="[bold bright_black]> [Error] <"))
             sys.exit(1)
 
 class FEATURE:
@@ -63,19 +69,19 @@ class FEATURE:
                     ])
                 )
         except (Exception) as e:
-            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="> [Error] <"))
+            printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="[bold bright_black]> [Error] <"))
             time.sleep(5.5)
             LOGIN().USERNAME()
 
         printf(Panel(f"""[bold green]01[bold white]. Get Free Instagram Followers
 [bold green]02[bold white]. Get Free Instagram Likes
 [bold green]03[bold white]. Get Free Instagram Views
-[bold green]04[bold white]. Logout ([bold red]Exit[bold white])""", width=63, style="bold bright_black", title="> [Fitur Utama] <", subtitle="╭──────", subtitle_align="left"))
+[bold green]04[bold white]. Logout ([bold red]Exit[bold white])""", width=63, style="bold bright_black", title="[bold bright_black]> [Fitur Utama] <", subtitle="[bold bright_black]╭──────", subtitle_align="left"))
         self.CHOOSE = Console().input("[bold bright_black]   ╰─> ")
         if self.CHOOSE in ['1', '01']:
-            printf(Panel(f"[bold white]Please fill in the username you want to send Followers to. For example:[bold green] @rozhak_official[bold white]\n*[bold red]remember not to fill in with a private account[bold white]!", width=63, style="bold bright_black", title="> [Username] <", subtitle="╭──────", subtitle_align="left"))
+            printf(Panel(f"[bold white]Please fill in the username you want to send Followers to. For example:[bold green] @rozhak_official[bold white]\n*[bold red]remember not to fill in with a private account[bold white]!", width=63, style="bold bright_black", title="[bold bright_black]> [Username] <", subtitle="[bold bright_black]╭──────", subtitle_align="left"))
             self.YOUR_USERNAME = Console().input("[bold bright_black]   ╰─> ").replace('@', '')
-            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="> [Catatan] <"))
+            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="[bold bright_black]> [Catatan] <"))
             while True:
                 try:
                     TAMPILKAN['COUNT'] = 0
@@ -86,10 +92,10 @@ class FEATURE:
                         time.sleep(2.5)
                         SUBMIT().LOGIN(self.YOUR_USERNAME, self.USERNAME, self.PASSWORD, HOST_NAME, QUERY='Follower')
                         if len(CHECKPOINT) >= 2:
-                            printf(Panel(f"[bold red]There was an error while sending Followers, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="> [Pengiriman Error] <"))
+                            printf(Panel(f"[bold red]There was an error while sending Followers, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="[bold bright_black]> [Pengiriman Error] <"))
                             sys.exit(1)
                         elif len(BAD) >= 2:
-                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="> [Login Error] <"))
+                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Error] <"))
                             sys.exit(1)
                         else:
                             continue
@@ -108,9 +114,9 @@ class FEATURE:
                     time.sleep(2.5)
                     continue
         elif self.CHOOSE in ['2', '02']:
-            printf(Panel(f"[bold white]Please fill in the post link, make sure your Instagram is not locked or private.\nFor example:[bold green] https://www.instagram.com/p/C08X1bNvh7g/", width=63, style="bold bright_black", title="> [Link Postingan] <", subtitle="╭──────", subtitle_align="left"))
+            printf(Panel(f"[bold white]Please fill in the post link, make sure your Instagram is not locked or private.\nFor example:[bold green] https://www.instagram.com/p/C08X1bNvh7g/", width=63, style="bold bright_black", title="[bold bright_black]> [Link Postingan] <", subtitle="[bold bright_black]╭──────", subtitle_align="left"))
             self.LINK_POST = Console().input("[bold bright_black]   ╰─> ").replace('@', '')
-            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="> [Catatan] <"))
+            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="[bold bright_black]> [Catatan] <"))
             while True:
                 try:
                     TAMPILKAN['COUNT'] = 0
@@ -121,10 +127,10 @@ class FEATURE:
                         time.sleep(2.5)
                         SUBMIT().LOGIN(self.LINK_POST, self.USERNAME, self.PASSWORD, HOST_NAME, QUERY='Likes')
                         if len(CHECKPOINT) >= 2:
-                            printf(Panel(f"[bold red]There was an error while sending Likes, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="> [Pengiriman Error] <"))
+                            printf(Panel(f"[bold red]There was an error while sending Likes, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="[bold bright_black]> [Pengiriman Error] <"))
                             sys.exit(1)
                         elif len(BAD) >= 2:
-                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="> [Login Error] <"))
+                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Error] <"))
                             sys.exit(1)
                         else:
                             continue
@@ -143,9 +149,9 @@ class FEATURE:
                     time.sleep(2.5)
                     continue
         elif self.CHOOSE in ['3', '03']:
-            printf(Panel(f"[bold white]Please fill in the post link, make sure your Instagram is not locked or private.\nFor example:[bold green] https://www.instagram.com/reel/C08X1bNvh7g/", width=63, style="bold bright_black", title="> [Link Postingan] <", subtitle="╭──────", subtitle_align="left"))
+            printf(Panel(f"[bold white]Please fill in the post link, make sure your Instagram is not locked or private.\nFor example:[bold green] https://www.instagram.com/reel/C08X1bNvh7g/", width=63, style="bold bright_black", title="[bold bright_black]> [Link Postingan] <", subtitle="[bold bright_black]╭──────", subtitle_align="left"))
             self.LINK_POST = Console().input("[bold bright_black]   ╰─> ").replace('@', '')
-            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="> [Catatan] <"))
+            printf(Panel(f"[bold white]You can use[bold green] CTRL + C[bold white] if stuck and use[bold red] CTRL + Z[bold white] if you want to stop. if it fails to send,\nthe service is probably under maintenance!", width=63, style="bold bright_black", title="[bold bright_black]> [Catatan] <"))
             while True:
                 try:
                     TAMPILKAN['COUNT'] = 0
@@ -156,10 +162,10 @@ class FEATURE:
                         time.sleep(2.5)
                         SUBMIT().LOGIN(self.LINK_POST, self.USERNAME, self.PASSWORD, HOST_NAME, QUERY='Views')
                         if len(CHECKPOINT) >= 2:
-                            printf(Panel(f"[bold red]There was an error while sending Views, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="> [Pengiriman Error] <"))
+                            printf(Panel(f"[bold red]There was an error while sending Views, it is possible that your Instagram account has been hit by a checkpoint, if not, it means your account has been detected as spam by Instagram!", width=63, style="bold bright_black", title="[bold bright_black]> [Pengiriman Error] <"))
                             sys.exit(1)
                         elif len(BAD) >= 2:
-                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="> [Login Error] <"))
+                            printf(Panel(f"[bold red]Your Instagram is experiencing login failure on 2 sites, try logging in manually and running this tool again!", width=63, style="bold bright_black", title="[bold bright_black]> [Login Error] <"))
                             sys.exit(1)
                         else:
                             continue
@@ -178,11 +184,11 @@ class FEATURE:
                     time.sleep(2.5)
                     continue
         elif self.CHOOSE in ['4', '04']:
-            printf(Panel(f"[bold white]You have selected the exit option, thank you for using this program. We hope this program helps you!", width=63, style="bold bright_black", title="> [Keluar] <"))
+            printf(Panel(f"[bold white]You have selected the exit option, thank you for using this program. We hope this program helps you!", width=63, style="bold bright_black", title="[bold bright_black]> [Keluar] <"))
             os.remove('Penyimpanan/Akun.json')
             sys.exit(0)
         else:
-            printf(Panel(f"[bold red]The option you entered is not available in this Feature, please try another option!", width=63, style="bold bright_black", title="> [Keluar] <"))
+            printf(Panel(f"[bold red]The option you entered is not available in this Feature, please try another option!", width=63, style="bold bright_black", title="[bold bright_black]> [Keluar] <"))
             time.sleep(4.5)
             FEATURE()
 
@@ -411,7 +417,7 @@ class SUBMIT:
                     self.LINK = (f'https://www.instagram.com/{MEDIA_USERNAME}' if QUERY == 'Follower' else TAUTAN)
                     printf(Panel(f"""[bold white]Status :[italic green] Successfully sending {str(QUERY).capitalize()}![/]
 [bold white]Link :[bold red] {self.LINK}
-[bold white]Jumlah :[bold yellow] + {self.JUMLAH}""", width=63, style="bold bright_black", title="> [Sukses] <"))
+[bold white]Jumlah :[bold yellow] + {self.JUMLAH}""", width=63, style="bold bright_black", title="[bold bright_black]> [Sukses] <"))
                     SUKSES += 1
                 else:
                     SUKSES += 1
@@ -437,7 +443,7 @@ if __name__ == '__main__':
         os.system('git pull')
         FEATURE()
     except (Exception) as e:
-        printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="> [Error] <"))
+        printf(Panel(f"[bold red]{str(e).capitalize()}!", width=63, style="bold bright_black", title="[bold bright_black]> [Error] <"))
         sys.exit(1)
     except (KeyboardInterrupt):
         sys.exit(1)
